@@ -1,4 +1,4 @@
-name: Build Xiaomi 11 (Evolution X 11 A16)
+name: Build Xiaomi Mi 11 lite 5G
 
 on:
   workflow_call:
@@ -6,14 +6,14 @@ on:
 
 env:
   # Device env
-  DEVICE_NAME : "xiaomi_11"
-  DEVICE_CODENAME : "venus"
+  DEVICE_NAME : "xiaomi_mi 11 lite 5G"
+  DEVICE_CODENAME : "renoir"
 
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
   EXTRA_CMDS : "LD=ld.lld"
 
-  KERNEL_SOURCE : "https://github.com/kamikaonashi/kernel_xiaomi_venus.git"
-  KERNEL_BRANCH : "16"
+  KERNEL_SOURCE : " https://github.com/Failedmush1/cherrish_renoir_kernel"
+  KERNEL_BRANCH : "base"
 
   CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
   CLANG_BRANCH : "lineage-20.0"
@@ -86,7 +86,7 @@ env:
   SKIP_PATCH: "false" # Ignore errors found in Patch Debugger.
 
   BUILD_OTHER_CONFIG: "true" # Merge config files.
-  MERGE_CONFIG_FILES: "vendor/venus_QGKI.config,vendor/xiaomi_QGKI.config"
+  MERGE_CONFIG_FILES: "vendor/renoir_QGKI.config,vendor/xiaomi_QGKI.config"
 
   FREE_MORE_SPACE: "false" # if u want get more space, enabled it.
 
